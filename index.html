@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Reenu</title>
+  <style>
+    body {
+    	<audio autoplay loop hidden>
+        <source src="Akhiyaan_1.mp3" type = audio/mpeg>
+        </audio>
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #001f3f, #001030, #000820); 
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15); 
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      text-align: center;
+      max-width: 90%;
+      width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      backdrop-filter: blur(10px); 
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ffeb3b;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px rgba(255,255,255,0.9);
+    }
+    p {
+      font-size: 1.3em;
+      color: #fff;   
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+    .highlight {
+      color: #ff4d94;
+      font-weight: bold;
+      text-shadow: 0 0 6px rgba(255,77,148,0.7);
+    }
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.85;
+      animation: fall linear forwards;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Birthday Reena </h1>
+    <p>From the day I met you, I felt something in my heart that I never felt before. It was like life had given me a new beginning.  </p>
+    <p>Every moment with you feels like magic. You turn my dullest days into the brightest ones just by being there.  </p>
+    <p>I cannot explain in words how <span class="highlight">special</span> you are to me. You are truly one of a kind, a rare soul who makes life beautiful. </p>
+    <p>You are not just my love, but also my best friend, my guide, my safe place, and my biggest blessing. </p>
+    <p>Whenever I see you smile, I feel like the world has no problems, no struggles—just pure happiness. </p>
+    <p>I wish that this year brings you endless joy, love, and success, because you deserve every bit of it. </p>
+    <p>I feel like I am <span class="highlight">reborn after meeting you</span>. You gave me strength, peace, and happiness that I never thought I’d find. </p>
+    <p>If I could, I would stop time just to stay with you in this moment forever. That’s how much you mean to me. </p>
+    <p>On your birthday, I pray that all your dreams come true, and that life keeps giving you the love you give to others. </p>
+    <p>Happy Birthday once again, my Reena  You are my everything, and I will always love you more than words can ever say. </p>
+  </div>
+
+  
+
+  <script>
+    function createConfettiBurst() {
+      for (let i = 0; i < 5; i++) {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        document.body.appendChild(confetti);
+        const colors = ["#ff4081", "#ffeb3b", "#4caf50", "#2196f3", "#9c27b0", "#ffffff"];
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.animationDuration = 12 + Math.random() * 10 + "s"; 
+        setTimeout(() => confetti.remove(), 20000);
+      }
+    }
+    setInterval(createConfettiBurst, 500);
+  </script>
+</body>
+</html>
